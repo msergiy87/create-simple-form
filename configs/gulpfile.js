@@ -4,5 +4,5 @@ var htmlmin = require('gulp-htmlmin');
 gulp.task('minify', function() {
   return gulp.src('../*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('/var/www/mysite'));
+    .pipe(gulp.dest('../mysite'));
 });
