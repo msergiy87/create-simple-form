@@ -3,42 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>MyShoutbox</title>
-</head>
 
-<body>
-
-<div id="container">
-
-
-<form class="mainform" >
-	
-    <p class="name">
-    	<input type="text" name="name" value="Имя автора" onblur="if(this.value.length == 0) this.value = 'Имя автора'" onfocus="if(this.value == 'Имя автора') this.value = '' "/>
-        <label for="name">Имя</label>
-    </p>
-    
-    <p class="email">
-    	<input type="text" name="email" value="name@example.com" onblur="if(this.value.length == 0) this.value = 'name@example.com'" onfocus="if(this.value == 'name@example.com') this.value = '' " />
-        <label for="email" >E-Mail</label>
-    </p>
-    
-    <p class="msg">
-    	<textarea name="msg" onblur="if(this.value.length == 0) this.value = 'Текст сообщения'" onfocus="if(this.value == 'Текст сообщения') this.value=''">Текст сообщения</textarea>
-    </p>
-    
-    <p class="send" >
-    	<input type="submit" value="Отправить"  />
-    </p>
-    
-
-    
-</form>
-
-</div>
-</body>
-
-<style type="text/css"> 
-
+<style type="text/css">
 #container {
 	margin: 0 auto;
 	border: 3px solid #EEEEEE;
@@ -92,4 +58,37 @@ input:hover, textarea:hover, input:focus, textarea:focus {
 }
 </style>
 
+</head>
+
+<body>
+
+<div id="container">
+
+
+<form class="mainform" >
+	
+    <p class="name">
+    	<input type="text" name="name" value="Имя автора" onblur="if(this.value.length == 0) this.value = 'Имя автора'" onfocus="if(this.value == 'Имя автора') this.value = '' "/>
+        <label for="name">Имя</label>
+    </p>
+    
+    <p class="email">
+    	<input type="text" name="email" value="name@example.com" onblur="if(this.value.length == 0) this.value = 'name@example.com'" onfocus="if(this.value == 'name@example.com') this.value = '' " />
+        <label for="email" >E-Mail</label>
+    </p>
+    
+    <p class="msg">
+    	<textarea name="msg" onblur="if(this.value.length == 0) this.value = 'Текст сообщения'" onfocus="if(this.value == 'Текст сообщения') this.value=''">Текст сообщения</textarea>
+    </p>
+    
+    <p class="send" >
+    	<input type="submit" value="Отправить"  />
+    </p>
+    
+
+    
+</form>
+
+</div>
+</body>
 </html>
