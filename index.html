@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>MyShoutbox</title>
-
 <style type="text/css">
-
 #container {
 	margin: 0 auto;
 	border: 3px solid #EEEEEE;
@@ -13,7 +11,6 @@
 	-webkit-birder-radius: 6px;
 	-moz-border-radius: 6px;
 }
-
 input, textarea {
 	border: solid 1px #CCCCCC;
 	margin-left: 10px;
@@ -25,25 +22,19 @@ input, textarea {
 	-webkit-birder-radius: 4px;
 	-moz-border-radius: 4px;
 }
-
 p label {
 	margin-left: 10px;
 	font-style: italic;
 	color: #c0c0c0;
 }
-
 .name input {
 	margin-top: 10px;
 }
-
-
 textarea {
 	width: 400px;
 	height: 150px;
 	line-height: 150%;
 }
-
-
 .send input {
 	width: auto;
 	margin-bottom: 10px;
@@ -51,19 +42,13 @@ textarea {
 	font: Verdana, Geneva, sans-serif;
 	background-color: #E5E5F8;
 }
-
-
-
 input:hover, textarea:hover, input:focus, textarea:focus {
 	border-color: #A0A0A0;
 }
-
 .send input:hover {
 	border: 2px solid #C0C0E3;
 }
-
 </style>
-
 </head>
 
 <body>
@@ -84,17 +69,37 @@ input:hover, textarea:hover, input:focus, textarea:focus {
     </p>
     
     <p class="msg">
-    	<textarea name="msg" onblur="if(this.value.length == 0) this.value = 'Текст сообщения'" onfocus="if(this.value == 'Текст сообщения') this.value=''">Текст сообщения</textarea>
+    	<textarea id="textArea" name="msg" onblur="if(this.value.length == 0) this.value = 'Текст сообщения'" onfocus="if(this.value == 'Текст сообщения') this.value=''">Текст сообщения</textarea>
+    </p>
+    <p>
+   
+    <input type="button" onclick="setCaretPosition('textArea', 5);" value="Установить курсор">
+   
     </p>
     
     <p class="send" >
     	<input type="submit" value="Отправить"  />
     </p>
     
-
     
 </form>
 
 </div>
-</body>
+<script>
+    function setCaretPosition(o, pos) {
+        o=document.getElementById(o);
+        if(o.setSelectionRange) {
+            o.focus();
+            o.setSelectionRange(pos,pos);
+        }else if (o.createTextRange) { // IE
+            var range = o.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', pos);
+            range.moveStart('character', pos);
+            range.select();
+        }
+    }
+
+</script>
+</body> 
 </html>
